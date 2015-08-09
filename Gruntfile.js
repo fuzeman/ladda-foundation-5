@@ -23,8 +23,7 @@ module.exports = function(grunt) {
             js: {
                 options: {
                     mangle: false,
-                    beautify: true,
-                    compress: false
+                    beautify: true
                 },
                 files: {
                     '<%= buildDir %>/ladda.js': [ '<%= jsDir %>/ladda.js' ],
@@ -34,7 +33,7 @@ module.exports = function(grunt) {
             jsmin: {
                 options: {
                     mangle: true,
-                    compress: true
+                    compress: {}
                 },
                 files: {
                     '<%= buildDir %>/ladda.min.js': [ '<%= jsDir %>/ladda.js' ],
