@@ -1,7 +1,7 @@
 {
     "name": "ladda-foundation-5",
     "description": "Buttons with built-in loading indicators, effectively bridging the gap between action and feedback",
-    "version": "0.8.0",
+    "version": "0.8.1",
     "license": "MIT",
     "main": [
         "dist/ladda-themeless.css",
