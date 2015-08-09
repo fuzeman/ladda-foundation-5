@@ -254,7 +254,9 @@
 	function createSpinner( button ) {
 
 		var height = button.offsetHeight,
-				spinnerColor;
+			spinnerTop = 'auto',
+			spinnerLeft = 'auto',
+			spinnerColor;
 
 		// If the button is tall we can afford some padding
 		if( height > 32 ) {
@@ -271,6 +273,15 @@
 			spinnerColor = button.getAttribute( 'data-spinner-color' );
 		}
 
+		// Allow buttons to specify a custom top/left value
+		if (button.hasAttribute( 'data-spinner-top' ) ) {
+			spinnerTop = button.getAttribute( 'data-spinner-top' );
+		}
+
+		if (button.hasAttribute( 'data-spinner-left' ) ) {
+			spinnerLeft = button.getAttribute( 'data-spinner-left' );
+		}
+
 		var lines = 12,
 			radius = height * 0.2,
 			length = radius * 0.6,
@@ -283,8 +294,8 @@
 			length: length,
 			width: width,
 			zIndex: 'auto',
-			top: 'auto',
-			left: 'auto',
+			top: spinnerTop,
+			left: spinnerLeft,
 			className: ''
 		} );
 
